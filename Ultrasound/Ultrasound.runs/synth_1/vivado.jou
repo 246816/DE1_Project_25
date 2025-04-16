@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Apr 16 13:51:23 2025
+# Process ID: 9708
+# Current directory: C:/Users/256513/Ultrasound/Ultrasound.runs/synth_1
+# Command line: vivado.exe -log top_level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
+# Log file: C:/Users/256513/Ultrasound/Ultrasound.runs/synth_1/top_level.vds
+# Journal file: C:/Users/256513/Ultrasound/Ultrasound.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top_level.tcl -notrace
