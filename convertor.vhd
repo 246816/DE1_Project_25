@@ -1,63 +1,66 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
 
 entity convertor is
-
-    generic(
-        -- Max distance in centimeters
-        max_distance : integer := 100; 
-    );
-
     port(
+
+        echo            : in    std_logic;
         -- Not CLK100MHz but the pulses from clk_en
-        clk_en_pulse    : in    std_logic;
-        -- BTNC
-        rst             : in    std_logic;
-        -- Sensor output
-        sensor_signal   : in    std_logic;
-        distance        : out   std_logic_vector(6 downto 0)
+        clk             : in    std_logic;
+        distance        : out   std_logic_vector(7 downto 0)
     );
 
 end convertor;
 
 architecture Behavioral of convertor is
 
-    constant SPEED_OF_WAVE : integer := 0.343;
+    constant SPEED_OF_WAVE : integer := 343;
 
-    signal sig_count : integer range 0 to max_distance - 1;
+    constant SCALING_FACTOR : integer := 20000;
+
+    signal sig_count_en : std_logic;
+
+    signal sig_count : unsigned(19 downto 0) := (others => '0');
+
+    signal sig_echo : std_logic := '0';
+
+    signal sig_distance : std_logic_vector(7 downto 0) := (others => '0');
 
     begin
 
-        proc_calc_distance : process(clk_en_pulse) is
+        proc_calc_distance : process(clk) is
             begin
             
             -- Maybe unnecessary
             if clk_en_pulse'event and clk_en_pulse = '1' then
 
-                if(rst = '1') then
+                if(echo = '1' and sig_count_en = '1') then
                     
-                    sig_count <= 0;
+                    sig_count_en <= '1';
 
-                elsif (sig_count < max_distance - 1) then
-                    if sensor_signal = '0' then
+                    sig_count <= (others => '0');
 
-                        -- TODO: Logic to convert x count to distance
-                            -- sig_count <= (sig_count * SPEED_OF_WAVE) / 2; ??
+                elsif (echo = '0' and sig_count_en = '1') then
+                    
+                    sig_count_en <= '0';
 
-                        distance <= sig_count;
+                    sig_distance <= std_logic_vector(to_unsigned((to_integer(sig_count) * SPEED_OF_WAVE) / SCALING_FACTOR, 8));
 
-                    else
-                        sig_count <= sig_count + 1;
+                end if;
 
-                    end if;
+                sig_echo <= echo;
 
-                else 
-                    sig_count <= 0;
+                if(sig_count_en = '1') then
+
+                    sig_count <= sig_count + 1;
 
                 end if;
 
             end if;
 
         end process;
+
+        distance <= sig_distance;
 
 end Behavioral;
