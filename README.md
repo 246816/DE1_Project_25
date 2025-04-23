@@ -13,3 +13,9 @@ This project aims to measure distance using ultrasound. We're using ultrasonic s
 Our device will be able to measure, calculate, and display distane of the ultrasonic wave, sent from transceiver on the ultrasonic sensor, and detected by its complementary receiver. The time it took for the signal to bounce back from a wall/object/material etc. will be translated into distance by dividing the speed of sound waves by this measured time.
 
 The distance is then converted into a binary signal, which is then displayed on the board's multiple 7-segment displays, and also on the board's LEDs.
+
+# The main aspects of our project are:
+
+* Being able to measure distance using ultrasound, based on knowing the speed of sound waves.
+* Displaying said distance using clever code developed by Adam and Vojtěch.
+* 
