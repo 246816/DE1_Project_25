@@ -5,3 +5,11 @@
 * Vítek Borovka
 * Adam Lefner
 * Lukáš Gergel
+
+### Abstract
+
+This project aims to measure distance using ultrasound. We're using ultrasonic sensor HS-SR04, connected to Nexys A7-50T board.
+
+Our device will be able to measure, calculate, and display distane of the ultrasonic wave, sent from transceiver on the ultrasonic sensor, and detected by its complementary receiver. The time it took for the signal to bounce back from a wall/object/material etc. will be translated into distance by dividing the speed of sound waves by this measured time.
+
+The distance is then converted into a binary signal, which is then displayed on the board's multiple 7-segment displays, and also on the board's LEDs.
