@@ -19,6 +19,9 @@ The distance is then converted into a binary signal, which is then displayed on 
 * Being able to measure distance using ultrasound, based on the knowledge of the speed of sound waves.
 * Displaying said distance using clever code developed by Adam and Vojtěch.
 
+
+### Přidat fotky, krátké video.
+
 ## Hardware
 
 For powering our device we're using an arduino board, simply for the reason that it has its own built-in convertor to 5V, and finally it's all wired up on a little breadboard. I/O from the sensor is then connected to the Nexys A7-50T's female inputs on its side.
