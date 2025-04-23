@@ -23,4 +23,6 @@ The distance is then converted into a binary signal, which is then displayed on 
 
 For powering our device we're using an arduino board, simply for the reason that it has its own built-in convertor to 5V, and finally it's all wired up on a little breadboard. I/O from the sensor is then connected to the Nexys A7-50T's female inputs on its side.
 
+![20250423_124614](https://github.com/user-attachments/assets/6d0d792f-2df3-441d-bbfa-ab50018a25d1)
+
 
