@@ -1,0 +1,83 @@
+
+*** Running vivado
+    with args -log top_level.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_level.tcl -notrace
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source top_level.tcl -notrace
+Command: link_design -top top_level -part xc7a50ticsg324-1L
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a50ticsg324-1L
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1008.445 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:8]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports CLK100MHZ]'. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:8]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'JC[1]'. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[2]'. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[3]'. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[4]'. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JD[1]'. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JD[2]'. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:117]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:117]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JD[3]'. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:118]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:118]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JD[4]'. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/256513/Ultrasound/Ultrasound.srcs/constrs_1/new/nexys.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1008.445 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+7 Infos, 10 Warnings, 10 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1008.445 ; gain = 0.000
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a50ti'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a50ti'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net XSEG1/CC_OBUF has multiple drivers: XSEG1/CC_OBUF_inst_i_2/O, XSEG1/CC_OBUF_inst_i_3/O, and XSEG1/CC_OBUF_inst_i_1/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net XSEG1/CD_OBUF has multiple drivers: XSEG1/CB_OBUF_inst_i_3/O, XSEG1/CB_OBUF_inst_i_1/O, and XSEG1/CB_OBUF_inst_i_2/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net XSEG1/seg3/CE_OBUF has multiple drivers: XSEG1/seg2//i_/O, XSEG1/seg1//i_/O, and XSEG1/seg3//i_/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net XSEG1/seg3/UNCONN_OUT has multiple drivers: XSEG1/seg3/CF_OBUF_inst_i_3/O, XSEG1/seg3/CF_OBUF_inst_i_2/O, and XSEG1/seg3/CF_OBUF_inst_i_1/O.
+INFO: [Project 1-461] DRC finished with 4 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1008.445 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 10 Warnings, 10 Critical Warnings and 5 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 16 13:52:22 2025...
