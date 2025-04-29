@@ -31,3 +31,12 @@ For powering our device we're using an arduino board, simply for the reason that
 
 ![elaborated_design](https://github.com/user-attachments/assets/1746b693-3376-4800-9321-ac2dd270c883)
 
+First, we introduce the "echo_meas" component. This component takes the output signal from the ultrasonic sensor, and transforms it into a 20-bit long signal. The length of 20 bits was selected because of possible overlaps in measured distance, and to add redundancy.
+
+![tb_echo_meas_1](https://github.com/user-attachments/assets/949c13e5-e39b-43df-8eab-6f177a51bcb1)
+
+Echo_meas then outputs a signal called "pulse_len", which is the 20-bit long signal stated previously. This is basically the measured distance already, but in binary. It is then further processed in "distance_calculation" component, which takes the "pulse_len" signal, and converts it into real distance, but not until the previous component "echo_meas" has sent a signal called "done", which signals the next component that it can turn the whole 20-bit sequence into real distance.
+
+![tb_distance_calculation](https://github.com/user-attachments/assets/699291fc-e778-433e-a05d-30a5762c338a)
+
+
