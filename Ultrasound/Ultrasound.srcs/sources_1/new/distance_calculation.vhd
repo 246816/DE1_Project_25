@@ -40,7 +40,7 @@ begin
                 
                 if(pulse_ready = '1') then
                 
-                    sig_distance <= resize((pulse_len * speed_of_wave / 2) / 1000, sig_distance'length);
+                    sig_distance <= resize((pulse_len * speed_of_wave / 2) / 100000, sig_distance'length);
                     sig_distance_ready <= '1';
                 
                 end if;

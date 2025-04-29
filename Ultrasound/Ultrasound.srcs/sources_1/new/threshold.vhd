@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity threshold is
-    port ( 
+    port (
         distance : in unsigned(15 downto 0);
         LED : out std_logic_vector(9 downto 0)
     );

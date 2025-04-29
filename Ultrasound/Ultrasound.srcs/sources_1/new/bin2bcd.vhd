@@ -84,7 +84,7 @@ begin
                         
                         temp_shift := temp_shift(26 downto 0) & '0';
                         
-                        sig_shift_reg <= sig_shift_reg(26 downto 0) & '0';
+                        sig_shift_reg <= temp_shift;
                         sig_bit_count <= sig_bit_count + 1;
                         
                     else
