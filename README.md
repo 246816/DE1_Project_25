@@ -43,4 +43,8 @@ Now the signal "distance", which is the real distance calculated with the knowle
 
 ![tb_bin2bcd](https://github.com/user-attachments/assets/aec8412c-9888-45e3-bc98-0f4a1abc3e02)
 
+The "ones", "tens" and "hundreds" signals from "bin2cbd" component go to the final component in this processing line, and that is "xseg" simply for displaying its value using 7-segment display included on the Nexys board. We wanted to use this and the LEDs, so that we have 2 ways of displaying the distance.
+
+![tb_xseg](https://github.com/user-attachments/assets/8a8f8f07-97fb-4fc7-8776-81c70a21e650)
+
 
