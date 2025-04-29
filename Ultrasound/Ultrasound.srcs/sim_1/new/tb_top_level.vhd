@@ -73,7 +73,6 @@ begin
         JB <= (others => '0');
 
         -- Reset generation
-        --  ***EDIT*** Replace YOURRESETSIGNAL below by the name of your reset as I haven't guessed it
         BTNC <= '1';
         wait for 100 ns;
         BTNC<= '0';

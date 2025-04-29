@@ -56,7 +56,7 @@ begin
         rst <= '0';
         wait for 100 ns;
 
-         -- Test case 1: pulse_len = 100000 (about 17.15 cm)
+         -- Pulse_len = 100000 expected ~171cm
         pulse_len <= to_unsigned(100000, pulse_len'length);
         pulse_ready <= '1';
         wait for 10 ns;
@@ -65,7 +65,7 @@ begin
         -- Wait some time to process
         wait for 200 ns;
 
-        -- Test case 2: pulse_len = 50000 (about 8.575 cm)
+        -- Pulse_len = 50000 expected ~85cm
         pulse_len <= to_unsigned(50000, pulse_len'length);
         pulse_ready <= '1';
         wait for 10 ns;
@@ -74,8 +74,8 @@ begin
         -- Wait
         wait for 200 ns;
 
-        -- Test case 3: pulse_len = 200000 (about 34.3 cm)
-        pulse_len <= to_unsigned(200000, pulse_len'length);
+        -- Pulse_len = 10000 expected ~11cm
+        pulse_len <= to_unsigned(10000, pulse_len'length);
         pulse_ready <= '1';
         wait for 10 ns;
         pulse_ready <= '0';
