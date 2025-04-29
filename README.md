@@ -1,10 +1,9 @@
 # DE1_Project_25
 ### Team Members
 
-* Vojtěch Krehan
-* Vítek Borovka
-* Adam Lefner
-* Lukáš Gergel
+* Vojtěch Krehan and Adam Lefner, responsible for the code
+* Vítek Borovka, responsible for wiring and putting the hardware together
+* Lukáš Gergel, responsible for writing this page and managing github repository
 
 ### Abstract
 
@@ -43,8 +42,8 @@ Now the signal "distance", which is the real distance calculated with the knowle
 
 ![tb_bin2bcd](https://github.com/user-attachments/assets/aec8412c-9888-45e3-bc98-0f4a1abc3e02)
 
-The "ones", "tens" and "hundreds" signals from "bin2cbd" component go to the final component in this processing line, and that is "xseg" simply for displaying its value using 7-segment display included on the Nexys board. We wanted to use this and the LEDs, so that we have 2 ways of displaying the distance.
+The "ones", "tens" and "hundreds" signals from "bin2cbd" component go to the final component in this processing line, and that is "xseg" simply for displaying its value using 7-segment display included on the Nexys board. This component includes the component "bin2seg" that we used in our vhdl labs throughout the semester. We wanted to use this and the LEDs, so that we have multiple ways of displaying the distance.
 
 ![tb_xseg](https://github.com/user-attachments/assets/8a8f8f07-97fb-4fc7-8776-81c70a21e650)
 
-
+Lastly, there 
