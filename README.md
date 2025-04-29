@@ -34,7 +34,7 @@ First, we introduce the "echo_meas" component. This component takes the output s
 ![elaborated_design](https://github.com/user-attachments/assets/1746b693-3376-4800-9321-ac2dd270c883)
 
 
-Echo_meas then outputs a signal called "pulse_len", which is the 21-bit long signal stated previously. This is basically the measured distance already, but in binary. It is then further processed in "distance_calculation" component, which takes the "pulse_len" signal, and converts it into real distance, but not until the previous component "echo_meas" has sent a signal called "done", which signals the next component that it can turn the whole sequence into real distance in centimeters.
+Echo_meas then outputs a signal called "pulse_len", which is the 21-bit long signal stated previously. This is basically the measured distance already, but in binary. It is then further processed in "distance_calculation" component, which takes the "pulse_len" signal, and converts it into real distance, but not until the previous component "echo_meas" has sent a signal called "done", which tells the next component that it can turn the whole sequence into real distance in centimeters.
 
 ![tb_echo_meas_1](https://github.com/user-attachments/assets/949c13e5-e39b-43df-8eab-6f177a51bcb1)
 
