@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
 
 -- This entity converts the input distance into 3 segments of hundreds, tens and ones 
---- 173 will be decoded as 1 -> hundreds, 7 -> tens, 3 -> ones
+-- 173 will be decoded as 1 -> hundreds, 7 -> tens, 3 -> ones
 -- Inputs are clock signal, reset signal and distance in cm with signal of ended calculation
 -- Outputs are three 4bit digits of the decoded distance with bcd ready signal of ended conversion
 entity bin2bcd is
