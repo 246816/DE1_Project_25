@@ -46,4 +46,4 @@ The "ones", "tens" and "hundreds" signals from "bin2cbd" component go to the fin
 
 ![tb_xseg](https://github.com/user-attachments/assets/8a8f8f07-97fb-4fc7-8776-81c70a21e650)
 
-Lastly, there 
+Lastly, there's the "threshhold" component, that does the same thing as "xseg", it displays the distance in a way that we can see it, but it does so using LEDs, also included on the Nexys board. It is capped at a maximum 10 LEDs turned on at the same time, displaying max distance (no more than 100cm). It displays distance based on tens of centimeters, meaning that distance < 10cm, only one LED will be powered on, 10 cm < distance < 20 cm 2 LEDs will be turned on and so on.
