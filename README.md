@@ -55,4 +55,3 @@ There is one last component called "trigger_generator", responsible for outputin
 With that, the whole project is completed, and put together in a top level.
 
 ![tb_top_level](https://github.com/user-attachments/assets/99000387-2849-4757-b6a1-bb634790b976)
-
