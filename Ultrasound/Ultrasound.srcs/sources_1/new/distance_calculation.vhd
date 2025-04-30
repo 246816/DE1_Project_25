@@ -56,7 +56,7 @@ begin
                     --- because the signal traveled to the object and back
                     -- Then is divided by 100000 because of the frequency of clock signal
                     -- After the calculation is resized to the 16 bit number
-                    sig_distance <= resize((pulse_len * speed_of_wave / 2) / 100000, sig_distance'length);
+                    sig_distance <= resize((pulse_len * speed_of_wave / 2) / 1000000, sig_distance'length);
                     -- Distance calculated successfully
                     sig_distance_ready <= '1';
                 
