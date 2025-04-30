@@ -118,13 +118,13 @@ begin
     end process;
     
     -- Deconstructs the internal seg signal into according catodes
-    CA <= sig_seg(0);
-    CB <= sig_seg(1);
-    CC <= sig_seg(2);
+    CA <= sig_seg(6);
+    CB <= sig_seg(5);
+    CC <= sig_seg(4);
     CD <= sig_seg(3);
-    CE <= sig_seg(4);
-    CF <= sig_seg(5);
-    CG <= sig_seg(6);
+    CE <= sig_seg(2);
+    CF <= sig_seg(1);
+    CG <= sig_seg(0);
     
     -- Process automatically runs when the internal selected digit signal is changed
     process(sig_digit_select)
