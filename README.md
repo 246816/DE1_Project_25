@@ -29,6 +29,7 @@ For powering our device we're using an arduino board, simply for the reason that
 # Top-level design
 
 ![elaborated_design](https://github.com/user-attachments/assets/1746b693-3376-4800-9321-ac2dd270c883)
+Ultrasound/Ultrasound.srcs/sources_1/new/top_level.vhd
 
 First, we introduce the "echo_meas" component. This component takes the output signal from the ultrasonic sensor, and transforms it into a 20-bit long signal. The length of 20 bits was selected because of possible overlaps in measured distance, and to add redundancy.
 
