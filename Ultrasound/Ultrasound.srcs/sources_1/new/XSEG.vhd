@@ -136,15 +136,15 @@ begin
         
             -- Turn on the ones 7seg
             when "00" =>
-                AN <= "110";
+                AN <= "11111110";
             when "01" =>
-                AN <= "101";
+                AN <= "11111101";
             when "10" =>
-                AN <= "011";
+                AN <= "11111011";
                 
             -- On any other selected digit turn off all the digits          
             when others =>
-                AN <= "111";
+                AN <= "11111111";
                           
         end case;
     
