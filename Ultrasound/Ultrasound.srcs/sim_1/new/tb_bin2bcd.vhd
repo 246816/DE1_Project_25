@@ -56,13 +56,12 @@ begin
         distance_ready <= '0';
 
         -- Reset generation
-        -- ***EDIT*** Check that rst is really your reset signal
         rst <= '1';
         wait for 100 ns;
         rst <= '0';
         wait for 100 ns;
 
-        -- Test 1: distance = 153 (expect 1 5 3)
+        -- Distance = 153 expected output hundreds - 1, tens - 5, ones - 3
         distance <= to_unsigned(153, 16);
         wait for 10 ns;
         distance_ready <= '1';
@@ -70,7 +69,7 @@ begin
         distance_ready <= '0';
         wait for 2 us;
 
-        -- Test 2: distance = 85 (expect 0 8 5)
+        -- Distance = 85 expected output hundreds - 0, tens - 8, ones - 5
         distance <= to_unsigned(85, 16);
         wait for 10 ns;
         distance_ready <= '1';
@@ -78,7 +77,7 @@ begin
         distance_ready <= '0';
         wait for 2 us;
 
-        -- Test 3: distance = 7 (expect 0 0 7)
+        -- Distance = 7 expected output hundreds - 0, tens - 0, ones 7
         distance <= to_unsigned(7, 16);
         wait for 10 ns;
         distance_ready <= '1';

@@ -2,12 +2,15 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
+-- This entity encapsulates all the other modules
+-- Communicates directly with the nexys board
 entity top_level is
     
     port(
         CLK100MHZ : in std_logic;
         BTNC: in std_logic;
-        JA : inout std_logic_vector(4 downto 1);
+        JA : out std_logic_vector(4 downto 1); -- Trig
+        JB : in std_logic_vector(4 downto 1); -- Echo
         CA, CB, CC, CD, CE, CF, CG : out std_logic;
         AN : out std_logic_vector(2 downto 0);
         DP : out std_logic;
@@ -18,22 +21,29 @@ end top_level;
 
 architecture Behavioral of top_level is
 
+    -- Internal signals because of the naming issues
     signal clk : std_logic;
     signal rst : std_logic;
-    signal echo : std_logic;
-    signal trig : std_logic;
 
+    -- Internal signals for JA(1) and JB(1) signals
+    signal sig_trig : std_logic;
+    signal sig_echo : std_logic;
+
+    -- Internal signals for the pulse length and ended measuring
     signal sig_pulse_len : unsigned(20 downto 0);
-    signal sig_done : std_logic;
+    signal sig_pulse_ready : std_logic;
     
+    -- Internal signals for the distance in cm and ended calculation
     signal sig_distance : unsigned(15 downto 0);
     signal sig_distance_ready : std_logic;
     
+    -- Internal signals for the bin2bcd
     signal sig_hundreds : unsigned(3 downto 0);
     signal sig_tens : unsigned(3 downto 0);
     signal sig_ones : unsigned(3 downto 0);
     signal sig_bcd_ready : std_logic;
 
+    -- Creates all the components
     component trigger_generator
         
         port(
@@ -109,27 +119,28 @@ architecture Behavioral of top_level is
     end component;
 
 begin
-
+    -- Assigns the constrains to internal signals for easier readability
     clk <= CLK100MHZ;
     rst <= BTNC;
-    trig <= JA(1);
-    echo <= JA(2);
     
-    JA(1) <= trig;
-
+    -- Assigns trig and echo signals accordingly
+    JA(1) <= sig_trig;
+    sig_echo <= JB(1);
+    
+    -- Instatiates all the modules
     trigger_generator_init : trigger_generator
         port map(
             clk => clk,
             rst => rst,
-            trig => trig
+            trig => sig_trig
         );
 
     echo_meas_init : echo_meas
         port map(
             clk => clk,
             rst => rst,
-            echo => echo,
-            done => sig_done,
+            echo => sig_echo,
+            done => sig_pulse_ready,
             pulse_len => sig_pulse_len
         );
         
@@ -138,7 +149,7 @@ begin
             clk => clk,
             rst => rst,
             pulse_len => sig_pulse_len,
-            pulse_ready => sig_done,
+            pulse_ready => sig_pulse_ready,
             distance => sig_distance,
             distance_ready => sig_distance_ready
         );

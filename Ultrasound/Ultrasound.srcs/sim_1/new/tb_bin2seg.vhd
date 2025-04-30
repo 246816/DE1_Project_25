@@ -30,7 +30,6 @@ begin
         bin <= (others => '0');
 
         -- Reset generation
-        -- ***EDIT*** Check that clear is really your reset signal
         clear <= '1';
         wait for 100 ns;
         clear <= '0';
@@ -38,13 +37,9 @@ begin
 
         -- ***EDIT*** Add stimuli here
 
-        for i in 0 to 9 loop
-            bin <= to_unsigned(i, 4);
-            wait for 50 ns;
-        end loop;
-
-        -- Optional: Test hex letters A-F (only if your bin2seg supports it)
-        for i in 10 to 15 loop
+        -- Loops through 0 - 15 and tries to show the number on the 7seg
+        -- Should output correct numbers and from 10-15 should be 11111111 (all catodes are off)
+        for i in 0 to 15 loop
             bin <= to_unsigned(i, 4);
             wait for 50 ns;
         end loop;
