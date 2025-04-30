@@ -50,8 +50,18 @@ Lastly, there's the "threshhold" component, that does the same thing as "xseg", 
 
 ![threshhold](https://github.com/user-attachments/assets/30ebfea9-7b56-400b-923e-39dcbe2baf2d)
 
+
 There is one last component called "trigger_generator", responsible for outputing a signal telling the sensor itself to send out measured data.
 
 With that, the whole project is completed, and put together in a top level.
 
 ![tb_top_level](https://github.com/user-attachments/assets/99000387-2849-4757-b6a1-bb634790b976)
+
+### Working example
+
+https://github.com/user-attachments/assets/e7e01b00-4c01-4bea-9600-50a52455ee3d
+
+
+
+
+
